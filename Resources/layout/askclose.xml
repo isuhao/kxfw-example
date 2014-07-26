@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KDialogBase windowStyle="AppWindow" fixSize="340,250" backgroundColor="70,185,240" skinName="winframe">
+    <KSpacer layout="VBox">
+      <KFrameItem layout="VBox" fixHeight="30" frameType="TileH" imagePath="res:/Resources/image/login_bk.png">
+        <KSpacer layout="HBox" margins="5,0,5,0">
+          <KImageItem fixWidth="20" imagePath="res:/Resources/image/loginlogo.png"/>
+          <KLabel text="关闭选项" bold="true" fontSize="13" textColor="255,255,255"/>
+          <KPushButton objectName="btnClose" skinName="winclose"/>
+        </KSpacer>
+      </KFrameItem>
+      <KWidget layout="VBox" backgroundColor="white" margins="80,20,0,0">
+        <KLabel text="您想要：" fixHeight="20"/>
+        <KButtonGroup layout="VBox" fixHeight="90" margins="50,0,0,0">
+          <KRadioButton objectName="btnMinimize" text="最小化软件" skinName="radio" check="true"/>
+          <KRadioButton objectName="btnExit" text="退出软件" skinName="radio"/>
+          <KRadioButton objectName="btnSwitch" text="切换帐号" skinName="radio"/>
+        </KButtonGroup>
+      </KWidget>
+      <KWidget fixHeight="1" backgroundColor="218,218,218"/>
+      <KWidget layout="HBox" fixHeight="50" spacing="20" backgroundColor="241,248,251" margins="0,10,20,0>
+        <KSpacer/>
+        <KPushButton objectName="btnOk" fixSize="60,25" text="确定" skinName="btncommon"/>
+        <KPushButton objectName="btnCancel" fixSize="60,25" text="取消" skinName="btncommon"/>
+      </KWidget>
+    </KSpacer>
+  </KDialogBase>
+</uitree>

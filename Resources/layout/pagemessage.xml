@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KSpacer layout="VBox">
+  	<KSpacer/>
+  	<KSpacer layout="VBox" margins="20,0,20,0">
+      <KCheckButton objectName="btnAutoReply" fixHeight="30" text="自动回复" imageWidth="28" imagePath="res:/Resources/image/cfgcheck_unselect.png|res:/Resources/image/cfgcheck_unselect_hover.png|res:/Resources/image/cfgcheck_select.png" autoAdjust="true"/>
+      <KSpacer layout="VBox" margins="5,0,0,0">
+    		<KLabel fixHeight="25" text="回复内容："/>
+  		  <KFrameItem layout="VBox" frameType="GridFour" frameSwitch="true" acceptHover="true" imagePath="res:/Resources/image/cfgedit_bk1.png|res:/Resources/image/cfgedit_bk2.png">
+  			  <KTextEdit objectName="msgReply"/>
+  		  </KFrameItem>      
+      </KSpacer>
+      <KSpacer layout="HBox" fixHeight="35" margins="0,10,50,0">
+        <KSpacer/>
+        <KPushButton objectName="updateReply" text="更新" fixWidth="50"/>
+        <KSpacer/>
+      </KSpacer>
+  	</KSpacer>
+  	<KSpacer/>
+  </KSpacer>
+</uitree>

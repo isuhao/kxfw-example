@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KDialogBase windowStyle="ToolWindow" backgroundColor="70,185,240" maskImage="res:/Resources/image/maskimage.png" frameImage="res:/Resources/image/frameimage.png" maskMargins="0,0,0,0">
+    <KSpacer layout="VBox" fixSize="-1,-1" margins="1,1,1,1" dragPolicy="Nothing">
+      <KSpacer layout="HBox" fixHeight="24" itemSpacing="18">
+        <KLabel text="房间密码" bold="true" fontSize="13"/>
+        <KPushButton objectName="btnClose" fixWidth="24" imagePath="res:/Resources/image/loginclose_normal.png|res:/Resources/image/loginclose_hover.png|res:/Resources/image/loginclose_down.png"/>
+      </KSpacer>
+      <KSpacer layout="VBox" fixWidth="200" margins="10,0,10,10">
+        <KSpacer layout="HBox" fixHeight="25" itemSpacing="5">
+          <KLabel text="密码：" autoAdjust="true"/>
+          <KFrameItem layout="VBox" frameType="GridFour" frameSwitch="true" acceptHover="true" imagePath="res:/Resources/image/cfgedit_bk1.png|res:/Resources/image/cfgedit_bk2.png">
+            <KLineEdit objectName="roompwd"/>
+          </KFrameItem>
+        </KSpacer>
+        <KSpacer layout="HBox" fixHeight="25">
+          <KSpacer/>
+          <KPushButton objectName="btnApply" text="确认" fixWidth="50" itemSpacing="10"/>
+          <KPushButton objectName="btnCancel" text="取消" fixWidth="50"/>
+          <KSpacer/>
+        </KSpacer>      
+      </KSpacer>
+    </KSpacer>
+  </KDialogBase>
+</uitree>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KDialogBase objectName="kkconfigure" windowStyle="ToolWindow" fixSize="590,450" fontName="微软雅黑" skinName="winframe">
+    <KFrameItem layout="VBox" frameType="GridFour" imagePath="res:/Resources/image/cfg_bk.png">
+      <KSpacer layout="HBox" fixHeight="24" itemSpacing="18" margins="5,5,5,0">
+        <KImageItem fixSize="90,24" imagePath="res:/Resources/image/cfguser_logo.png"/>
+        <KSpacer/>
+        <KPushButton objectName="btnClose" skinName="winclose"/>
+      </KSpacer>
+      <KSpacer layout="Anchor">
+        <KSpacer layout="HBox" anchor="Left:0|Top:0|Right:0|Bottom:0">
+    	    <KTabWidget objectName="tabWizard" fixWidth="140" index="1" layout="VBox" margins="0,15,0,0">
+    		    <KTabItem objectName="pagePhoto" enabled="false" layout="HBox" fixHeight="90" frameType="GridFour" imagePath="a">
+    			    <KSpacer/>
+    			    <KSpacer layout="VBox">
+                <KSpacer layout="HBox" fixHeight="59" margins="0,0,0,0">
+                  <KSpacer/>
+                  <KFrameItem layout="VBox" fixWidth="59" frameType="GridFour" alignment="AlignHCenter" imagePath="res:/Resources/image/cfghead_bk.png" margins="1,1,1,1">
+        	          <KImageItem effectColor="255,255,255" handHover="true" imagePath="res:/Resources/image/head.png"/>
+                  </KFrameItem>
+                  <KSpacer/>
+                </KSpacer>
+	              <KLabel text="更改头像" textAlignment="AlignCenter" textColor="60,60,60" bold="false" textMargins="23,3,3,0" autoAdjust="true"/>
+              </KSpacer>
+              <KSpacer/>
+            </KTabItem>
+            <KTabItem objectName="pageSystem" layout="HBox" fixHeight="44" frameType="GridFour" imagePath="|res:/Resources/image/cfgtab_select.png">
+        	    <KSpacer/>
+        	    <KImageItem fixWidth="32" imagePath="res:/Resources/image/system.png"/>
+              <KLabel text="系统设置" textAlignment="AlignCenter" textColor="60,60,60" textMargins="3,3,3,0" autoAdjust="true"/>
+              <KSpacer/>
+            </KTabItem>
+            <KTabItem objectName="pageSafty" layout="HBox" fixHeight="44" frameType="GridFour" imagePath="|res:/Resources/image/cfgtab_select.png">
+        	    <KSpacer/>
+        	    <KImageItem fixWidth="32" imagePath="res:/Resources/image/safty.png"/>
+              <KLabel text="安全设置" textAlignment="AlignCenter" textColor="60,60,60" textMargins="3,3,3,0" autoAdjust="true"/>
+              <KSpacer/>
+            </KTabItem>
+            <KTabItem objectName="pageInfo" layout="HBox" fixHeight="44" frameType="GridFour" imagePath="|res:/Resources/image/cfgtab_select.png">
+        	    <KSpacer/>
+        	    <KImageItem fixWidth="32" imagePath="res:/Resources/image/info.png"/>
+              <KLabel text="我的信息" textAlignment="AlignCenter" textColor="60,60,60" textMargins="3,3,3,0" autoAdjust="true"/>
+              <KSpacer/>
+            </KTabItem>
+            <KTabItem objectName="pageMedia" layout="HBox" fixHeight="44" frameType="GridFour" imagePath="|res:/Resources/image/cfgtab_select.png">
+        	    <KSpacer/>
+        	    <KImageItem fixWidth="32" imagePath="res:/Resources/image/media.png"/>
+              <KLabel text="语音视频" textAlignment="AlignCenter" textColor="60,60,60" textMargins="3,3,3,0" autoAdjust="true"/>
+              <KSpacer/>
+            </KTabItem>
+            <KTabItem objectName="pageMessage" layout="HBox" fixHeight="44" frameType="GridFour" imagePath="|res:/Resources/image/cfgtab_select.png">
+        	    <KSpacer/>
+        	    <KImageItem fixWidth="32" imagePath="res:/Resources/image/message.png"/>
+              <KLabel text="消息设置" textAlignment="AlignCenter" textColor="60,60,60" textMargins="3,3,3,0" autoAdjust="true"/>
+              <KSpacer/>
+            </KTabItem>
+            <KTabItem objectName="pageHotkey" layout="HBox" fixHeight="44" frameType="GridFour" imagePath="|res:/Resources/image/cfgtab_select.png">
+        	    <KSpacer/>
+        	    <KImageItem fixWidth="32" imagePath="res:/Resources/image/hotkey.png"/>
+              <KLabel text="热键设置" textAlignment="AlignCenter" textColor="60,60,60" textMargins="3,3,3,0" autoAdjust="true"/>
+              <KSpacer/>
+            </KTabItem>
+          </KTabWidget>
+          <KFrameItem fixWidth="1" frameType="StretchVMiddle" imagePath="res:/Resources/image/cfg_vertical_line.png"/>
+          <KStackedWidget objectName="stackedWizard" margins="20,20,20,20" autoSwitch="false">
+            <KWidget objectName="pagePhoto" visible="false" layout="VBox"/>
+            <KWidget objectName="pageSystem" layout="VBox" visible="true" xmlPath="qrcxml:/Resources/layout/pagesystem.xml"/>
+            <KWidget objectName="pageSafty" layout="VBox"  xmlPath="qrcxml:/Resources/layout/pagesafty.xml"/>
+            <KWidget objectName="pageInfo" layout="VBox" xmlPath="qrcxml:/Resources/layout/pageinfo.xml"/>
+            <KWidget objectName="pageMedia" layout="VBox" xmlPath="qrcxml:/Resources/layout/pagemedia.xml"/>
+            <KWidget objectName="pageMessage" layout="VBox" xmlPath="qrcxml:/Resources/layout/pagemessage.xml"/>
+            <KWidget objectName="pageHotkey" layout="VBox" xmlPath="qrcxml:/Resources/layout/pagehotkey.xml"/>
+          </KStackedWidget>
+        </KSpacer>
+        <KLabel objectName="submitTip" anchor="Left:140|Bottom:60|Right:0|Bottom:35" z="1" visible="false" textColor="252,58,78" backgroundColor="163,216,253" textAlignment="AlignCenter"/>
+      </KSpacer>
+      <KSpacer layout="HBox" fixHeight="50" margins="0,0,50,20">
+        <KSpacer/>
+      </KSpacer>     
+    </KFrameItem>
+
+  </KDialogBase>
+</uitree>

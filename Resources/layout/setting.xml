@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KSpacer layout="VBox" margins="10,20,10,10">
+  	<KLabel text="房间设置" fixHeight="25" itemSpacing="5"/>
+  	<KSpacer layout="HBox" fixHeight="25" itemSpacing="5">
+  		<KLabel text="房间名称：" autoAdjust="true"/>
+      <KFrameItem layout="VBox" fixWidth="150" frameType="GridFour" frameSwitch="true" acceptHover="true" imagePath="res:/Resources/image/cfgedit_bk1.png|res:/Resources/image/cfgedit_bk2.png">
+        <KLineEdit objectName="roomName" maxLength="20"/>
+      </KFrameItem>
+  		<KLabel text="20个字符以内" autoAdjust="true"/>
+  	</KSpacer>
+  	<KSpacer layout="HBox" fixHeight="25" itemSpacing="5">
+  		<KLabel text="房间主题：" autoAdjust="true"/>
+      <KFrameItem layout="VBox" frameType="GridFour" frameSwitch="true" acceptHover="true" imagePath="res:/Resources/image/cfgedit_bk1.png|res:/Resources/image/cfgedit_bk2.png">
+        <KLineEdit objectName="roomTheme" maxLength="30" />
+      </KFrameItem>
+      <KLabel text="30个字符以内" autoAdjust="true"/>
+  	</KSpacer>
+  	<KSpacer layout="HBox" fixHeight="25">
+  		<KLabel text="房间状态：" autoAdjust="true"/>
+      <KxTextComboBox objectName="roomOpen" fixWidth="100" textAlignment="AlignLeft|AlignVCenter" listText="公开模式|密码模式|关闭模式" index="0"  skinName="combox"/>
+      <KSpacer objectName="pwdRequest" layout="HBox" fixWidth="-1" widgetFlags="ClipsChildrenToShape">
+   		  <KLabel text="房间密码(仅数字)：" autoAdjust="true"/>
+        <KFrameItem layout="VBox" fixWidth="100" frameType="GridFour" frameSwitch="true" acceptHover="true" imagePath="res:/Resources/image/cfgedit_bk1.png|res:/Resources/image/cfgedit_bk2.png">
+          <KLineEdit objectName="roomPwd" intValidator="0,999999999"/>
+        </KFrameItem>
+      </KSpacer>
+  	</KSpacer>
+  	<KSpacer layout="HBox" fixHeight="25">
+      <KCheckButton objectName="pubChatOpen" text="是否打开公聊" reverse="true" skinName="check" autoAdjust="true"/>
+  		<KCheckButton objectName="coolText" text="允许炫彩文字" reverse="true" skinName="check" autoAdjust="true"/>
+  	</KSpacer>
+    <KSpacer layout="HBox" fixHeight="25">
+      <KCheckButton objectName="prvChatOpen" text="是否打开私聊" reverse="true" skinName="check" autoAdjust="true"/>
+    </KSpacer>
+  	<KSpacer layout="HBox" fixHeight="25">
+      <KCheckButton objectName="userExitOpen" text="是否显示用户进场信息" reverse="true" skinName="check" autoAdjust="true"/>
+  	</KSpacer>
+  </KSpacer>
+</uitree>

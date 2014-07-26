@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KFrameItem layout="HBox" fixSize="-1,-1" backgroundColor="249,253,255" frameType="GridFour" imagePath="res:/Resources/image/frameimage.png" margins="5,5,5,5">
+    <KAnimationItem objectName="animation" playPolicy="PlayToVisible" stretch="true" smooth="true" layout="VBox" fixSize="65,65" margins="1,1,1,1" itemSpacing="5"/>
+    <KSpacer layout="VBox" fixSize="-1,-1">
+      <KSpacer layout="HBox" fixHeight="20">
+        <KLabel text="价格：" textColor="70,185,240" autoAdjust="true"/>
+        <KLabel objectName="price" text="0"/>
+      </KSpacer>
+      <KSpacer layout="HBox" fixHeight="20" margins="0,0,5,0">
+        <KLabel text="对方获得：" textColor="70,185,240" autoAdjust="true"/>
+        <KLabel objectName="money" text="0" autoAdjust="true"/>
+      </KSpacer>
+      <KTextItem objectName="description" maximumSize="130,35"/>
+    </KSpacer>
+  </KFrameItem>
+</uitree>

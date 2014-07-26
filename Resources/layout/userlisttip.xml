@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KFrameItem layout="HBox" fixSize="-1,-1" backgroundColor="249,253,255" frameType="GridFour" imagePath="res:/Resources/image/frameimage.png" margins="5,5,5,5">
+    <KFrameItem layout="VBox" fixSize="58,58" frameType="GridFour" imagePath="res:/Resources/image/frame.png" itemSpacing="5">
+      <KImageItem objectName="photo"/>
+    </KFrameItem>
+    <KSpacer layout="VBox" fixSize="-1,-1">
+      <KSpacer layout="HBox" fixSize="-1,20">
+        <KLabel text="ID：" textColor="70,185,240" autoAdjust="true"/>
+        <KLabel objectName="imid" text="0" autoAdjust="true"/>
+      </KSpacer>
+      <KSpacer layout="HBox" fixSize="-1,20">
+        <KLabel text="呢称：" textColor="70,185,240" autoAdjust="true"/>
+        <KLabel objectName="name" text="0" autoAdjust="true"/>
+      </KSpacer>
+      <KSpacer layout="HBox" fixSize="-1,-1" itemSpacing="3">
+        <KLabel text="角色：" textColor="70,185,240" fixHeight="20" autoAdjust="true"/>
+        <KSpacer layout="VBox" fixSize="-1,-1">
+          <KSpacer objectName="roleArea" layout="HBox" fixSize="-1,-1">
+            <KAnimationItem objectName="role" fixSize="20,20"/>
+            <KLabel objectName="roleDesc" text="" textAlignment="AlignBottom|AlignLeft" textMargins="0,0,0,1" autoAdjust="true"/>
+          </KSpacer>
+          <KSpacer objectName="exroleArea" layout="HBox" fixSize="-1,-1">
+            <KAnimationItem objectName="exrole" fixSize="20,20"/>
+            <KLabel objectName="exroleDesc" text="" textAlignment="AlignBottom|AlignLeft" textMargins="0,0,0,1" autoAdjust="true"/>
+          </KSpacer>
+        </KSpacer>
+      </KSpacer>
+    </KSpacer>
+  </KFrameItem>
+</uitree>

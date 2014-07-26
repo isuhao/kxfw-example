@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KDialogBase windowStyle="ToolWindow" backgroundColor="255,255,255" skinName="winframe">
+    <KSpacer layout="VBox" fixSize="-1,-1" margins="1,1,1,1">
+      <KSpacer layout="HBox" fixHeight="24" itemSpacing="18" margins="9,7,9,0">
+        <KImageItem fixSize="24,24" imagePath="res:/Resources/image/loginlogo.png"/>
+        <KLabel text="添加播放器" bold="true" fontSize="13" textColor="255,255,255"/>
+        <KPushButton objectName="btnClose" skinName="winclose"/>
+      </KSpacer>
+      <KSpacer layout="VBox" fixWidth="300" margins="10,0,10,10">
+        <KSpacer layout="HBox" fixHeight="25" itemSpacing="5">
+          <KLabel text="播放器名字：" autoAdjust="true"/>
+          <KFrameItem layout="VBox" frameType="GridFour" frameSwitch="true" acceptHover="true" imagePath="res:/Resources/image/cfgedit_bk1.png|res:/Resources/image/cfgedit_bk2.png">
+            <KLineEdit objectName="nameEdit"/>
+          </KFrameItem>
+        </KSpacer>
+        <KSpacer layout="HBox" fixHeight="25" itemSpacing="5">
+          <KLabel text="播放器地址：" autoAdjust="true"/>
+          <KFrameItem layout="VBox" frameType="GridFour" frameSwitch="true" acceptHover="true" imagePath="res:/Resources/image/cfgedit_bk1.png|res:/Resources/image/cfgedit_bk2.png">
+            <KLineEdit objectName="pathEdit" readOnly="true"/>
+          </KFrameItem>
+          <KPushButton objectName="btnBrowser" fixWidth="30" text="..."/>
+        </KSpacer>
+        <KSpacer layout="HBox" fixHeight="25">
+          <KSpacer/>
+          <KPushButton objectName="btnInsert" text="确认" fixWidth="50" itemSpacing="10"/>
+          <KPushButton objectName="btnCancel" text="取消" fixWidth="50"/>
+          <KSpacer/>
+        </KSpacer>      
+      </KSpacer>
+    </KSpacer>
+  </KDialogBase>
+</uitree>

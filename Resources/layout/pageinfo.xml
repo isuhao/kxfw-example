@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KSpacer layout="VBox" margins="10,10,10,10">
+    <KSpacer/>
+    <KSpacer layout="HBox" fixHeight="-1">
+      <KSpacer/>
+      <KSpacer layout="VBox" spacing="5">
+        <KSpacer layout="HBox" fixHeight="25">
+          <KLabel text="ID:"  autoAdjust="true"/>
+          <KFrameItem layout="VBox" fixWidth="100" frameType="GridFour" frameSwitch="true" acceptHover="true" imagePath="res:/Resources/image/cfgedit_bk1.png|res:/Resources/image/cfgedit_bk2.png">
+            <KLineEdit objectName="imid" text="123456789" readOnly="true" autoAdjust="true"/>
+          </KFrameItem>
+        </KSpacer>
+        <KSpacer layout="HBox" fixHeight="25">
+          <KLabel text="呢称:" autoAdjust="true"/>
+          <KFrameItem layout="VBox" fixWidth="200" frameType="GridFour" frameSwitch="true" acceptHover="true" imagePath="res:/Resources/image/cfgedit_bk1.png|res:/Resources/image/cfgedit_bk2.png">
+            <KLineEdit objectName="nick" text="我为歌狂一生" readOnly="false" fixWidth="200"/>
+          </KFrameItem>
+        </KSpacer>
+        <KSpacer layout="HBox" fixHeight="25">
+          <KLabel text="姓别:" autoAdjust="true"/>
+          <KxTextComboBox objectName="sex" listText="男|女" fixWidth="60" textAlignment="AlignLeft|AlignVCenter" skinName="combox"/>
+        </KSpacer>
+        <KSpacer layout="HBox" fixHeight="25">
+          <KSpacer layout="HBox" fixHeight="25">
+            <KLabel text="地区:" autoAdjust="true"/>
+            <KxTextComboBox objectName="area" listText="中国|海外" fixWidth="80" textAlignment="AlignLeft|AlignVCenter" skinName="combox"/>
+          </KSpacer>
+          <KSpacer layout="HBox" fixHeight="25">
+            <KLabel text="省份:" autoAdjust="true"/>
+            <KxTextComboBox objectName="province" fixWidth="100" textAlignment="AlignLeft|AlignVCenter"  skinName="combox"/>
+          </KSpacer>
+          <KSpacer layout="HBox" fixHeight="25">
+            <KLabel text="城市:" autoAdjust="true"/>
+            <KxTextComboBox objectName="city" fixWidth="120" textAlignment="AlignLeft|AlignVCenter"  skinName="combox"/>
+          </KSpacer>
+        </KSpacer>
+        <KSpacer layout="HBox" fixHeight="25">
+          <KLabel text="邮箱:" autoAdjust="true"/>
+          <KFrameItem layout="VBox" fixWidth="300" frameType="GridFour" frameSwitch="true" acceptHover="true" imagePath="res:/Resources/image/cfgedit_bk1.png|res:/Resources/image/cfgedit_bk2.png">
+            <KLineEdit objectName="email" text="323122@qq.com" readOnly="true"/>
+          </KFrameItem>
+        </KSpacer>
+        <KSpacer layout="HBox" fixHeight="35" margins="0,10,50,0">
+          <KSpacer/>
+          <KPushButton objectName="updateUser" text="更新" fixWidth="50"/>
+          <KSpacer/>
+        </KSpacer>
+      </KSpacer>
+      <KSpacer/>
+    </KSpacer>
+    <KSpacer/>
+  </KSpacer>
+</uitree>

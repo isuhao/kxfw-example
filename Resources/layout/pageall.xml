@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" ?>
+<xmlui>
+	<KPopupWindow windowStyle="MainWindow" fixSize="1400,800">
+	  <KSpacer layout="VBox" margins="10,10,10,10">
+	    <KSpacer layout="VBox">
+	    	<KSpacer layout="HBox">
+	    		<KImageItem fixSize="428,352" imagePath="res:/Resources/image/configure/pagebk.png" layout="VBox" xmlPath="qrcxml:/Resources/layout/pagehotkey.xml"/>
+	      	<KImageItem fixSize="428,351" imagePath="res:/Resources/image/configure/pagebk.png" layout="VBox" xmlPath="qrcxml:/Resources/layout/pagesystem.xml"/>
+	      	<KImageItem fixSize="428,351" imagePath="res:/Resources/image/configure/pagebk.png" layout="VBox" xmlPath="qrcxml:/Resources/layout/pagesafty.xml"/>
+	    	</KSpacer>
+	    	<KSpacer layout="HBox">
+	    		<KImageItem fixSize="428,351" imagePath="res:/Resources/image/configure/pagebk.png" layout="VBox" xmlPath="qrcxml:/Resources/layout/pagemyinfo.xml"/>
+	      	<KImageItem fixSize="428,351" imagePath="res:/Resources/image/configure/pagebk.png" layout="VBox" xmlPath="qrcxml:/Resources/layout/pageav.xml"/>
+	      	<KImageItem fixSize="428,351" imagePath="res:/Resources/image/configure/pagebk.png" layout="VBox" xmlPath="qrcxml:/Resources/layout/pagemessage.xml"/>
+	    	</KSpacer>
+	    </KSpacer>
+	  </KSpacer>
+  </KPopupWindow>
+</xmlui>

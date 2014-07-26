@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KSpacer objectName="facePage" layout="VBox" anchor="Left:0|Top:-200|Right:0|Top:0" visible="false" margins="2,2,2,2">
+    <KFrameItem objectName="faceFrame" layout="VBox" fixWidth="400" itemPanel="true" backgroundColor="white" frameType="GridFour" imagePath="res:/Resources/image/faceframe.png" margins="1,1,1,1">
+      <KSpacer layout="VBox" margins="3,3,3,3">
+        <KStackedWidget objectName="faceStacked" index="0" widgetFlags="Default">
+          <KScrollWidget layout="VBox" skinName="scrollarea" vscroll.deltaFactor="10">
+            <KTableWidget objectName="tableFace1" fixHeight="300" spacing="3,3"/>
+          </KScrollWidget>
+          <KScrollWidget layout="VBox" skinName="scrollarea" vscroll.deltaFactor="20">
+            <KTableWidget objectName="tableFace2" fixHeight="300" spacing="3,3"/>
+          </KScrollWidget>
+          <KScrollWidget layout="VBox" skinName="scrollarea" vscroll.deltaFactor="20">
+            <KTableWidget objectName="tableFace3" fixHeight="300" spacing="3,3"/>
+          </KScrollWidget>
+          <KScrollWidget layout="VBox" skinName="scrollarea" vscroll.deltaFactor="20">
+            <KTableWidget objectName="tableFace4" fixHeight="300" spacing="3,3"/>
+          </KScrollWidget>
+        </KStackedWidget>
+      </KSpacer>
+      <KWidget fixHeight="1" backgroundColor="218,218,218"/>
+      <KFrameItem layout="VBox" frameType="GridFour" fixHeight="23" backgroundColor="241,248,254">
+         <KTabWidget objectName="faceTab" layout="HBox" index="0">
+          <KTabItem layout="HBox" skinName="facetab">
+            <KLabel text="默认" textAlignment="AlignCenter"/>
+          </KTabItem>
+          <KFrameItem imagePath="res:/Resources/image/facetab_sperator.png" fixWidth="1"/>
+           <KTabItem layout="HBox" skinName="facetab">
+            <KLabel text="表情二" textAlignment="AlignCenter"/>
+          </KTabItem>
+          <KFrameItem imagePath="res:/Resources/image/facetab_sperator.png" fixWidth="1"/>
+           <KTabItem layout="HBox" skinName="facetab">
+            <KLabel text="表情三" textAlignment="AlignCenter"/>
+          </KTabItem>
+           <KFrameItem imagePath="res:/Resources/image/facetab_sperator.png" fixWidth="1"/>
+           <KTabItem layout="HBox" skinName="facetab">
+            <KLabel text="表情四" textAlignment="AlignCenter"/>
+          </KTabItem>
+         </KTabWidget>
+      </KFrameItem>
+    </KFrameItem>    
+  </KSpacer>
+  <KFrameItem objectName="fontPage" itemPanel="true" layout="HBox" frameType="GridFour" defaultFrame="RoundWhite" visible="false" anchor="Left:0|Top:-25|Right:0|Top:0" margins="2,2,2,2">
+  </KFrameItem>
+  <KWidget anchor="Left:0|Top:0|Right:0|Top:28" layout="VBox" backgroundColor="218,242,255" margins="0,0,0,2">
+    <KFrameItem layout="HBox" fixHeight="2" frameType="TileH" imagePath="res:/Resources/image/hsperator.png"/>
+    <KSpacer layout="HBox" margins="5,2,5,2">
+		  <KxTextComboBox objectName="chatType" fixWidth="80" dropListMaxHeight="150" listText="聊天|大喇叭|小喇叭" index="0" skinName="combox"/>
+      <KSpacer objectName="chatTargetPannel" widgetFlags="ClipsChildrenToShape" layout="HBox" fixWidth="-1">
+        <KLabel text=" 对 " textColor="19,88,118" autoAdjust="true"/>
+        <KCommonComboBox objectName="chatTarget" listText="所有人" readOnly="true" fixWidth="150" itemsText="A|B|C" index="0"  skinName="combox"/>
+        <KSpacer objectName="privatChatPannel" layout="HBox" fixWidth="0" margins="5,0,0,0">
+          <KCheckButton objectName="privateChat" text="悄悄话" spacing="3" skinName="check" textMargin="0,0,0,0" autoAdjust="true"/>
+        </KSpacer>
+      </KSpacer>
+      <KPushButton objectName="btnFont" fixSize="0,20" visible="false"/>
+      <KPushButton objectName="btnFace" fixWidth="25" buttonFrame.frameType="OneHVCenter" imagePath="res:/Resources/image/faceexp_normal.png|res:/Resources/image/faceexp_hover.png|res:/Resources/image/faceexp_down.png"/>
+      <KxTextComboBox objectName="textSize" fixWidth="50" dropListMaxHeight="150" listText="9|10|11|12|13|14|15|16" dropListShowUp="true" index="0" skinName="combox"/>
+      <KxColorComboBox objectName="textColor" fixWidth="50" itemMargins="1,1,1,1" dropListMaxHeight="150" index="1" dropListShowUp="true" skinName="combox" itemSpacing="5"/>
+      <KPushButton objectName="btnColorWord" visible="true" text="彩条" fixWidth="50" skinName="btncommon"/>
+    </KSpacer>
+  </KWidget>
+  <KFrameItem anchor="Left:0|Top:28|Right:0|Top:110" layout="HBox" backgroundColor="white" margins="2,2,2,2">
+    <KTextEdit objectName="textEdit" backgroundColor="1,0,0,0" hasScrollbar="false"/>
+    <KSpacer layout="VBox" fixWidth="78" margins="0,0,0,2">
+      <KSpacer/>
+      <KSpacer layout="HBox" fixSize="76,30">
+        <KPushButton objectName="btnMsgSend" text="发送" skinName="btncommon"/>
+      </KSpacer>
+    </KSpacer>
+  </KFrameItem>
+</uitree>
+

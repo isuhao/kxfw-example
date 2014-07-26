@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KSpacer layout="Anchor">
+    <KSpacer layout="VBox" anchor="Left:0|Top:0|Right:0|Bottom:0">
+      <KSpacer layout="HBox">
+        <KWidget objectName="leftVideo" fixWidth="242" layout="VBox" backgroundColor="218,242,255" margins="4,5,6,0">
+          <KKEmbedWindowWidget objectName="topmic0" fixSize="-1,-1"/>
+          <KKEmbedWindowWidget objectName="topmic1" fixSize="-1,-1"/>
+          <KKEmbedWindowWidget objectName="topmic2" fixSize="-1,-1"/>
+          <KSpacer/>
+          <KFrameItem layout="HBox" fixHeight="2" frameType="TileH" imagePath="res:/Resources/image/hsperator.png">
+            <KKSoundSprite objectName="soundSprite" imagePath="res:/Resources/image/spectrum.png"/>
+          </KFrameItem>
+          <KWidget objectName="operateArea" fixSize="-1,-1" layout="HBox" margins="5,4,6,4">
+            <KSpacer layout="VBox" fixSize="-1,55" spacing="1" itemSpacing="1">
+              <KSpacer layout="HBox" fixWidth="-1" spacing="1">
+                <KPushButton objectName="btnRoomCfg" fixSize="27,27" toolTip="可以修改房间设置" imagePath="res:/Resources/image/roomcfg_normal.png|res:/Resources/image/roomcfg_hover.png|res:/Resources/image/roomcfg_down.png"/>
+                <KKSliderVolume objectName="btnMainVolumeCtrl" skinName="volumectrl" toolTip="可以修改主音量"  imagePath="res:/Resources/image/systemvolumn_open.png|res:/Resources/image/systemvolumn_close.png"/>
+                <KKSliderVolume objectName="btnMicVolumeCtrl" skinName="volumectrl" toolTip="可以修改麦克风音量" imagePath="res:/Resources/image/systemmic_open.png|res:/Resources/image/systemmic_close.png"/>
+              </KSpacer>
+              <KSpacer layout="HBox" fixWidth="-1" spacing="1">
+                <KPushButton objectName="btnPersonCfg" fixSize="27,27" toolTip="可以修改个人设置" imagePath="res:/Resources/image/personcfg_normal.png|res:/Resources/image/personcfg_hover.png|res:/Resources/image/personcfg_down.png"/>
+                <KPushButton objectName="btnAudioProcCtl" fixSize="27,27" toolTip="可以修改音频处理方式" enabled="false" imagePath="res:/Resources/image/audioproc_normal.png|res:/Resources/image/audioproc_hover.png|res:/Resources/image/audioproc_down.png"/>
+                <KPushButton objectName="btnMusicPlay" fixSize="27,27" toolTip="可以修改音频捕获方式" imagePath="res:/Resources/image/music_mic_normal.png|res:/Resources/image/music_mic_hover.png|res:/Resources/image/music_mic_down.png"/>
+              </KSpacer>
+            </KSpacer>
+            <KSpacer layout="VBox" fixHeight="55" itemSpacing="1" spacing="1">
+              <KPushButton objectName="btnChargeMoney" text="官方充值" skinName="f2charge"/>
+              <KPushButton objectName="btnAudioCapture" text="按F2说话" skinName="f2charge"/>
+            </KSpacer>
+            <KSpacer layout="VBox" fixSize="85,55">
+              <KPushButton objectName="btnObtainMic" text="排麦" textAlignment="AlignLeft|AlignVCenter" textMargins="38,0,0,0" fontSize="15" textColor="255,255,255" imagePath="res:/Resources/image/obtainmic_normal.png|res:/Resources/image/obtainmic_hover.png|res:/Resources/image/obtainmic_down.png|res:/Resources/image/obtainmic_disable.png"/>
+            </KSpacer>
+          </KWidget>
+        </KWidget>
+        <KWidget fixWidth="1" backgroundColor="218,218,218"/>
+        <KSpacer layout="VBox">
+          <KFrameItem layout="HBox" fixHeight="65" frameType="GridFour" imagePath="res:/Resources/image/roominfobk.png" margins="0,0,0,0">
+            <KFlashItem objectName="giftRotation" translucent="false" flashPath="other:/Resources/other/giftRotation/gift.swf"/>
+          </KFrameItem>
+          <KSplitWidget  splitbarSize="5" rightBotMinSize="50" leftTopMinSize="50" value="300" splitbar.backgroundColor="217,228,234">
+            <KTextEdit objectName="publicChat" hasContextMenu="true" readOnly="true" layout="Anchor" scrollColor="192,225,242" text="aaaaaa"/>
+            <KTextEdit objectName="privateChat" layout="Anchor" scrollColor="192,225,242" hasContextMenu="true" text="bbbbbb\r\n\r\n\r\n"/>
+          </KSplitWidget>
+          <KWidget fixHeight="1" backgroundColor="218,218,218"/>
+          <KSpacer objectName="inputArea" z="100" layout="Anchor" fixHeight="110" xmlPath="res:/Resources/layout/roomeditbar.xml"/>
+          <KSpacer fixHeight="5"/>
+        </KSpacer>
+        <KWidget fixWidth="1" backgroundColor="218,218,218"/>
+        <KSpacer objectName="rightPannel" layout="VBox" fixWidth="266">
+          <KSpacer layout="VBox" fixHeight="150">
+            <KTextEdit objectName="roomBulletin" hasContextMenu="false" layout="Anchor" readOnly="true">
+              <KSpacer objectName="editTool" layout="HBox" anchor="Right:50|Bottom:25|Right:5|Bottom:5" spacing="3"  visible="false" >
+                <KPushButton objectName="btnEdit" fixSize="17,17" layout="VBox" imagePath="res:/Resources/image/bulletinedit_normal.png|res:/Resources/image/bulletinedit_hover.png|res:/Resources/image/bulletinedit_down.png"/>
+                <KPushButton objectName="btnUrlInsert" fixSize="17,17" imagePath="res:/Resources/image/bulletinlink_normal.png|res:/Resources/image/bulletinlink_hover.png|res:/Resources/image/bulletinlink_down.png"/>
+              </KSpacer>
+            </KTextEdit>
+            <KWidget fixHeight="1" backgroundColor="172,202,217"/>
+            <KTabWidget objectName="userWizard" fixHeight="28" index="1" layout="HBox" backgroundColor="19,179,253">
+              <KTabItem layout="HBox" fixWidth="75" skinName="listtab">
+                <KSpacer/>
+                <KLabel text="管理/" textColor="white" autoAdjust="true" antialiase="false"/>
+                <KLabel objectName="number" text="000" textColor="white" autoAdjust="true"/>
+                <KSpacer/>
+              </KTabItem>
+              <KTabItem layout="HBox" fixWidth="75" skinName="listtab">
+                <KSpacer/>
+                <KLabel text="用户/" textColor="white" autoAdjust="true"/>
+                <KLabel objectName="number" text="000" textColor="white" autoAdjust="true"/>
+                <KSpacer/>
+              </KTabItem>
+              <KTabItem layout="HBox" fixWidth="75" skinName="listtab">
+                <KSpacer/>
+                <KLabel text="麦序/" textColor="white" autoAdjust="true"/>
+                <KLabel objectName="number" text="000" textColor="white" autoAdjust="true"/>
+                <KSpacer/>
+              </KTabItem>
+              <KSpacer/>
+              <KPushButton objectName="maixuClear" fixSize="28,28" toolTip="清空麦序" imagePath="res:/Resources/image/micclean_normal.png|res:/Resources/image/micclean_hover.png|res:/Resources/image/micclean_down.png"/>
+            </KTabWidget>
+          </KSpacer>
+          <KStackedWidget objectName="userStacked" index="1" margins="1,0,1,0">
+            <KxListWidget objectName="adminList" skinName="list"/>
+            <KxListWidget objectName="userList" skinName="list"/>
+            <KxListWidget objectName="micList" skinName="list"/>
+          </KStackedWidget>
+          <KWidget fixHeight="1" backgroundColor="172,202,217"/>
+          <KTabWidget objectName="giftsTab" fixHeight="28" index="0" layout="HBox"  backgroundColor="19,179,253">
+            <KTabItem layout="HBox" fixWidth="40" skinName="listtab">
+              <KLabel text="热门" textColor="white" textAlignment="AlignCenter"/>
+            </KTabItem>
+            <KTabItem layout="HBox" fixWidth="40" skinName="listtab">
+              <KLabel text="幸运" textColor="white" textAlignment="AlignCenter"/>
+            </KTabItem>
+            <KTabItem layout="HBox" fixWidth="40" skinName="listtab">
+              <KLabel text="奢侈" textColor="white" textAlignment="AlignCenter"/>
+            </KTabItem>
+            <KSpacer/>
+          </KTabWidget>
+          <KStackedWidget objectName="giftsStacked" index="0" fixHeight="140" widgetFlags="Default">
+            <KScrollWidget layout="VBox" skinName="scrollarea">
+    		      <KTableWidget objectName="hotGifts" fixHeight="0" spacing="1,1" margins="5,5,5,5"/>
+  		      </KScrollWidget>
+  		      <KScrollWidget layout="VBox" skinName="scrollarea">
+    		      <KTableWidget objectName="loveGifts" fixHeight="0" spacing="1,1" margins="5,5,5,5"/>
+  		      </KScrollWidget>
+  		      <KScrollWidget layout="VBox" skinName="scrollarea">
+    		      <KTableWidget objectName="friendGifts" fixHeight="0" spacing="1,1" margins="5,5,5,5"/>
+  		      </KScrollWidget>
+          </KStackedWidget>
+          <KSpacer objectName="giftBuyPannel" z="1" layout="Anchor" fixHeight="25" margins="3,1,3,1">
+            <KSpacer layout="HBox" anchor="Left:0|Top:0|Right:0|Bottom:0">
+              <KLabel text="赠与" textAlignment="AlignCenter" autoAdjust="true"/>
+              <KKHistoryComboxWidget objectName="giftTarget" readOnly="true" fixWidth="100" index="0"  skinName="combox"/>
+              <KSpacer/>
+              <KLabel text="数量" textAlignment="AlignCenter" autoAdjust="true"/>
+              <KxHistoryComboBox objectName="giftNumber" listText="1|18|99|199|300|520|666|888|920|999|1314|9999"   readOnly="false" edit.intValidator="1,99999" fixWidth="60" index="0" skinName="combox"/>
+              <KSpacer/>
+              <KPushButton objectName="btnGiftBuy" fixWidth="50" text="赠送" skinName="btncommon"/>            
+            </KSpacer>
+            <KLabel objectName="buyResult" visible="false" layout="HBox" backgroundColor="209,231,242" anchor="Left:0|Top:-25|Right:0|Top:0"/>
+          </KSpacer>
+          <KWidget layout="HBox" fixHeight="1" backgroundColor="218,218,218"/>
+          <KxMessageEdit objectName="bugleEdit" fixWidth="266" layout="Anchor" hasContextMenu="true" scrollColor="192,225,242">
+            <KSpacer objectName="msgEditPannel" layout="VBox" anchor="Right:40|Top:20|Right:15|Top:80">
+              <KPushButton objectName="msgClean" toolTip="清屏" skinName="msgclean"/>
+            </KSpacer>
+          </KxMessageEdit>
+        </KSpacer>        
+      </KSpacer>
+    </KSpacer>    
+  </KSpacer>
+</uitree>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KSpacer layout="VBox" fixSize="-1,-1" margins="0,0,0,0">
+   <KImageItem layout="VBox" fixSize="233,182" borderColor="19,179,253" borderPixel="1" imagePath="res:/Resources/image/video_bk.png" margins="2,2,1,1">
+     <KKVideoFlushWidget objectName="video" layout="Anchor" borderColor="0,0,255">
+      <KFrameItem objectName="topTool" visible="true" anchor="Left:0|Top:0|Right:0|Top:25" fixHeight="25" layout="HBox" frameType="GridFour" margins="0,0,0,0" imagePath="res:/Resources/image/videocontrolbar_bk.png">
+        <KCheckButton objectName="micopen" fixWidth="25" imageWidth="25" imagePath="res:/Resources/image/videomicopen_normal.png|res:/Resources/image/videomicopen_hover.png|res:/Resources/image/videomicopen_down.png|res:/Resources/image/videomicclose_normal.png|res:/Resources/image/videomicclose_hover.png|res:/Resources/image/videomicclose_down.png"/>
+        <KCheckButton objectName="camera" fixWidth="25" imageWidth="25" imagePath="res:/Resources/image/videocamera_normal.png|res:/Resources/image/videocamera_hover.png|res:/Resources/image/videocamera_down.png|res:/Resources/image/videocamera_close_normal.png|res:/Resources/image/videocamera_close_hover.png|res:/Resources/image/videocamera_close_down.png"/>
+        <KPushButton objectName="capture" fixWidth="25" imagePath="res:/Resources/image/videocapture_normal.png|res:/Resources/image/videocapture_hover.png|res:/Resources/image/videocapture_down.png"/>
+      </KFrameItem>
+      <KKSpectrumSprite objectName="spectrum" anchor="Right:40|Top:5|Right:5|Top:20" imagePath="res:/Resources/image/spectrum.png"/>      
+    </KKVideoFlushWidget>
+   </KImageItem>
+   <KWidget objectName="botTool" backgroundColor="214,248,255" fixHeight="21" layout="Anchor">
+    <KLabel objectName="nickName" anchor="Left:0|Top:0|Left:232|Bottom:0" text="" textColor="50,50,50" underlineOnHover="true" click="true" textAlignment="AlignCenter" textColor="109,109,109"/>
+    <KLabel objectName="timeLeft" anchor="Left:180|Top:0|Left:232|Bottom:0" fixWidth="50" text="" textAlignment="AlignVCenter|AlignRight" textColor="109,109,109"/>
+    <KFrameItem objectName="netStatus" anchor="Left:2|Top:0|Left:19|Bottom:0" z="1" frameType="OneHVCenter" imagePath="res:/Resources/image/netlevel0.png|res:/Resources/image/netlevel1.png|res:/Resources/image/netlevel2.png"/>
+  </KWidget>
+ </KSpacer>
+</uitree>

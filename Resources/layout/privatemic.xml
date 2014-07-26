@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KPopupWindow objectName="MyWindow" visible="false" windowStyle="ToolWindow" fixSize="236,235" skinName="winframe" backgroundColor="214,248,255">
+    <KSpacer layout="VBox">
+      <KFrameItem layout="VBox" fixHeight="30" frameType="TileH" imagePath="res:/Resources/image/login_bk.png">
+        <KSpacer layout="HBox" margins="5,0,5,0">
+          <KImageItem fixWidth="20" imagePath="res:/Resources/image/loginlogo.png"/>
+          <KLabel text="用户私麦" bold="true" fontSize="13" textColor="255,255,255"/>
+          <KPushButton objectName="btnClose" skinName="winclose"/>
+        </KSpacer>
+      </KFrameItem>
+      <KSpacer objectName="prvmic" layout="VBox" fixSize="-1,-1" xmlPath="qrcxml:/Resources/layout/videoport.xml" margins="1,0,1,1"/>
+    </KSpacer>
+  </KPopupWindow>
+</uitree>

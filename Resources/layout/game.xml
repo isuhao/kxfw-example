@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KPopupWindow windowStyle="CloseButton|MinButton|SystemMenu" backgroundColor="70,185,240" fixSize="798,636" skinName="winframe">
+    <KSpacer layout="VBox" margins="2,0,0,2">
+      <KSpacer layout="HBox" fixHeight="35" margins="3,0,0,0">
+        <KImageItem fixWidth="24" imagePath="res:/Resources/image/loginlogo.png"/>
+        <KLabel text="游戏" bold="true" fontSize="13" textColor="255,255,255"/>
+        <KSpacer/>
+        <KPushButton objectName="titleMin" skinName="sysmin"/>
+        <KPushButton objectName="titleClose" skinName="sysclose"/>
+      </KSpacer>
+      <KSpacer layout="VBox">
+        <KFlashItem objectName="flashGame" flashPath="game:/Resources/game/main.swf"/>
+      </KSpacer>
+    </KSpacer>
+  </KPopupWindow>
+</uitree>

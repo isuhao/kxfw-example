@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KDialogBase windowStyle="ToolWindow" backgroundColor="70,185,240" skinName="winframe">
+    <KSpacer layout="VBox" dragPolicy="Nothing">
+      <KFrameItem layout="VBox" fixHeight="30" frameType="TileH" imagePath="res:/Resources/image/login_bk.png">
+        <KSpacer layout="HBox" margins="5,0,5,0">
+          <KImageItem fixWidth="20" imagePath="res:/Resources/image/loginlogo.png"/>
+          <KLabel text="用户登录" bold="true" fontSize="13" textColor="255,255,255"/>
+          <KPushButton objectName="btnClose" skinName="winclose"/>
+        </KSpacer>
+      </KFrameItem>
+      <KWebBrowser fixSize="358,362" objectName="webBrowser" subclass="true" url="http://home.17keke.com/init.do?method=register" autoGo="true"  margins="1,0,1,1"/>
+    </KSpacer>
+  </KDialogBase>
+</uitree>

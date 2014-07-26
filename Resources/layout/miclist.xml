@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KSpacer layout="VBox" margins="10,20,10,10">
+  	<KLabel text="排麦设置" fixHeight="25" itemSpacing="5"/>
+  	<KSpacer layout="HBox" fixHeight="25" itemSpacing="5">
+  		<KLabel text="上麦时间" autoAdjust="true"/>
+      <KxTextComboBox objectName="mictime" textAlignment="AlignLeft|AlignVCenter"  listText="180|240|300|360|420|65535"  skinName="combox"/>
+  		<KLabel text="（可选时间为30秒到8分钟）" autoAdjust="true"/>
+  	</KSpacer>
+  	<KSpacer layout="HBox" fixHeight="25" itemSpacing="5">
+      <KCheckButton objectName="freemic" text="是否房间自由上麦" reverse="true" skinName="check" autoAdjust="true"/>
+  	</KSpacer>
+  	<KSpacer layout="HBox" fixHeight="25">
+      <KxTextComboBox objectName="speakmode" fixWidth="150" listText="房间所有人可以说话|房间管理员可以说话|室主副室主可以说话|只有正室主可以说话" index="0" dropListMaxHeight="170" textAlignment="AlignLeft|AlignVCenter"  skinName="combox"/>
+      <KLabel text="(按F2说话)" autoAdjust="true"/>
+  	</KSpacer>
+  </KSpacer>
+</uitree>

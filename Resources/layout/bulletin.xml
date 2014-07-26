@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KSpacer layout="VBox" margins="10,30,10,10">
+  	<KLabel text="房间公告：（这个是为房间的固定公告）" fixHeight="25" itemSpacing="5"/>
+  	<KSpacer layout="HBox" fixHeight="180" itemSpacing="10">
+  		<KFrameItem layout="VBox" frameType="GridFour" imagePath=":/image/Resources/image/richeditbk.png">
+  			<KSpacer layout="HBox" fixHeight="22" spacing="3" margins="1,1,1,1" itemSpacing="3">
+          <KImageItem objectName="color1" fixWidth="22" acceptClick="true" handHover="true" borderColor="0,0,0" effectColor="255,0,255" backgroundColor="0,0,0"/>
+          <KImageItem objectName="color2" fixWidth="22" acceptClick="true" handHover="true" borderColor="0,0,0" effectColor="255,0,255" backgroundColor="255,0,0"/>
+          <KImageItem objectName="color3" fixWidth="22" acceptClick="true" handHover="true" borderColor="0,0,0" effectColor="255,0,255" backgroundColor="0,255,0"/>
+          <KImageItem objectName="color4" fixWidth="22" acceptClick="true" handHover="true" borderColor="0,0,0" effectColor="255,0,255" backgroundColor="0,0,255"/>
+          <KLabel text="(字体颜色)" autoAdjust="true"/>
+          <KPushButton objectName="urlInsert" fixWidth="22" text="URL"/>
+        </KSpacer>
+        <KFrameItem layout="VBox" frameType="GridFour" frameSwitch="true" acceptHover="true" imagePath="res:/Resources/image/cfgedit_bk1.png|res:/Resources/image/cfgedit_bk2.png">
+          <KTextEdit objectName="bulletin" text=""/>
+        </KFrameItem>
+        <KPushButton objectName="btnApply" fixSize="50,25"  text="应用" itemSpacing="50"/>
+  		</KFrameItem>
+  	</KSpacer>
+  </KSpacer>
+</uitree>

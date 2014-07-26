@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KPopupWindow objectName="floatGiftAni" visible="false" translucent="true" backgroundColor="128,0,0,0" windowStyle="ToolWindow|NoFrame">
+    <KSpacer layout="Anchor">
+      <KSpacer objectName="giftPlayPannel" z="1000" layout="Anchor" anchor="Left:0|Top:0|Right:0|Top:537">
+      	<KFlashItem objectName="flash0" anchor="Left:0|Top:0|Right:0|Top:200" translucent="true" visible="false" dragPolicy="Nothing" flashPath="other:/Resources/other/giftGlobal/gift.swf" loopPlay="true" autoPlay="true"/>
+      	<KFlashItem objectName="flash1" anchor="Left:0|Top:100|Right:0|Top:300" translucent="true" visible="false" dragPolicy="Nothing" flashPath="other:/Resources/other/giftGlobal/gift.swf" loopPlay="true" autoPlay="true"/>
+      	<KFlashItem objectName="flash2" anchor="Left:0|Top:200|Right:0|Top:400" translucent="true" visible="false" dragPolicy="Nothing" flashPath="other:/Resources/other/giftGlobal/gift.swf" loopPlay="true" autoPlay="true"/>
+      	<KFlashItem objectName="flash3" anchor="HCenter:-468|Top:0|HCenter:468|Top:537" translucent="true" visible="false" dragPolicy="Nothing" flashPath="other:/Resources/other/giftCommon/gift.swf" loopPlay="true" autoPlay="true"/>
+    	</KSpacer> 
+    </KSpacer>
+  </KPopupWindow>
+</uitree>

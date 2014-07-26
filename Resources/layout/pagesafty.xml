@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KSpacer layout="VBox" margins="30,10,10,10">
+    <KSpacer/>
+    <KSpacer layout="HBox" fixHeight="-1">
+      <KSpacer/>
+      <KSpacer layout="VBox" fixWidth="-1">
+        <KSpacer layout="HBox" fixHeight="35" margins="0,5,0,5">
+      	  <KLabel text="旧的密码：" autoAdjust="true"/>
+      	  <KFrameItem layout="VBox" fixWidth="100" frameType="GridFour" frameSwitch="true" acceptHover="true" imagePath="res:/Resources/image/cfgedit_bk1.png|res:/Resources/image/cfgedit_bk2.png">
+      		  <KLineEdit objectName="pwdOld" mode="Password"/>
+      	  </KFrameItem>
+      	  <KLabel text="(20位以内)" autoAdjust="true"/>
+        </KSpacer>
+        <KSpacer layout="HBox" fixHeight="35" margins="0,5,0,5">
+      	  <KLabel text="新的密码：" autoAdjust="true"/>
+          <KFrameItem layout="VBox" fixWidth="100" frameType="GridFour" frameSwitch="true" acceptHover="true" imagePath="res:/Resources/image/cfgedit_bk1.png|res:/Resources/image/cfgedit_bk2.png">
+            <KLineEdit objectName="pwdNew" mode="Password"/>
+      	  </KFrameItem>
+      	  <KLabel text="(20位以内)" autoAdjust="true"/>
+        </KSpacer>
+        <KSpacer layout="HBox" fixHeight="35" margins="0,5,0,5">
+      	  <KLabel text="密码确认：" autoAdjust="true"/>
+          <KFrameItem layout="VBox" fixWidth="100" frameType="GridFour" frameSwitch="true" acceptHover="true" imagePath="res:/Resources/image/cfgedit_bk1.png|res:/Resources/image/cfgedit_bk2.png">
+            <KLineEdit objectName="pwdConfirm" mode="Password"/>
+      	  </KFrameItem>
+      	  <KSpacer/>
+        </KSpacer>
+        <KSpacer layout="HBox" fixHeight="35" margins="0,10,50,0">
+          <KSpacer/>
+          <KPushButton objectName="updatePwd" text="更新" fixWidth="50"/>
+          <KSpacer/>
+        </KSpacer>
+      </KSpacer>
+      <KSpacer/>
+    </KSpacer>
+    <KSpacer/>
+  </KSpacer>
+</uitree>

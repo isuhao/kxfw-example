@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KPopupWindow objectName="MyWindow" windowStyle="MainWindow" minimumSize="1020,720" skinName="winframe">
+	  <KSpacer layout="VBox" margins="0,0,0,1">
+      <KSpacer objectName="captionArea" layout="VBox" sizeToChild="true" acceptClick="true">
+        <KFrameItem  layout="HBox" z="1000" fixHeight="36" margins="5,0,0,0">
+          <KSpacer layout="Anchor">
+            <KSpacer layout="HBox" anchor="Left:0|Top:0|Right:0|Bottom:0">
+              <KSpacer fixWidth="10"/>
+              <KImageItem fixSize="17,36" imagePath="res:/Resources/image/titlelogo.png" itemSpacing="5"/>
+              <KLabel text="可可视频社区" textColor="255,255,255" fontSize="12" fontName="微软雅黑" itemSpacing="20" autoAdjust="true"/>
+              <KTabWidget objectName="tabWizard" fixHeight="36" index="0" spacing="5" layout="HBox" margins="0,5,0,0" spacing="3">
+                <KTabItem layout="VBox" fixSize="80,31" frameType="GridFour" imagePath="res:/Resources/image/tabitem_unselect.png|res:/Resources/image/tabitem_select.png">
+                  <KLabel objectName="label" text="社区大厅" fontSize="12" textColor="19,179,253" fontName="微软雅黑" textAlignment="AlignCenter" textMargins="0,0,0,0"/>
+                </KTabItem>
+              </KTabWidget>
+            </KSpacer>
+            <KSpacer layout="HBox" anchor="Left:0|Top:0|Right:0|Bottom:0">
+              <KSpacer/>
+              <KSpacer layout="HBox" fixSize="-1,36" margins="0,0,0,0">
+                <KSpacer objectName="userInfo" layout="HBox" fixWidth="-1"  widgetFlags="ClipsChildrenToShape" itemSpacing="30">
+                  <KLabel text="ID:" textColor="255,255,255" autoAdjust="true"/>
+                  <KLabel objectName="userId" text="123456" textColor="255,255,255" autoAdjust="true" itemSpacing="5"/>
+                  <KLabel text="呢称：" textColor="255,255,255" autoAdjust="true"/>
+                  <KLabel objectName="userName" text="游客" textColor="255,255,255" autoAdjust="true" itemSpacing="5"/>
+                  <KSpacer layout="HBox" fixWidth="-1">
+                    <KLabel text="金币：" textColor="white" autoAdjust="true"/>
+                    <KLabel objectName="goldNumber" text="0" textColor="yellow" bold="true" autoAdjust="true"/>
+                  </KSpacer>
+                </KSpacer>
+                <KLabel objectName="titleLogin" text="注册或登录" handCursorOnHover="true" underlineOnHover="true" click="true" textColor="255,255,255" autoAdjust="true"/>
+                <KSpacer fixWidth="10"/>
+                <KPushButton objectName="titleMin" skinName="sysmin" itemSpacing="3"/>
+                <KCheckButton objectName="titleMaxRestore" skinName="sysmaxrestore"  itemSpacing="3"/>
+                <KPushButton objectName="titleClose" skinName="sysclose"/>
+                <KSpacer fixWidth="10"/>
+              </KSpacer>
+            </KSpacer>
+          </KSpacer>
+        </KFrameItem>       
+      </KSpacer>
+      <KWidget objectName="oneRoom" layout="VBox" backgroundColor="241,248,254" xmlPath="res:/Resources/layout/room.xml"  margins="1,0,1,0"/>
+	  </KSpacer>
+  </KPopupWindow>
+</uitree>

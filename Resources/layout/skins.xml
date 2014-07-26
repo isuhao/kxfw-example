@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" ?>
+<uiskin>
+  <KPopupWindow name="winframe" closeOnEscape="false" backgroundColor="19,179,253" maskImage="res:/Resources/image/maskimage.png" frameImage="res:/Resources/image/frameimage.png" maskMargins="0,0,0,0"/>
+  <KCommonComboBox name="combox" margins="0,2,2,2" contentMargins="3,0,2,0" itemMargins="3,0,2,0" dropButton.fixWidth="20" dropList.skinName="list" frameImage="res:/Resources/image/comboframe_unselect.png|res:/Resources/image/comboframe_select.png" buttonImage="A|B" buttonIcon="res:/Resources/image/combodrop_ico.png"/>
+  <KCommonComboBox name="logincombox" margins="0,2,2,2" contentMargins="3,0,2,0" itemMargins="3,0,2,0" dropButton.fixWidth="20" dropList.skinName="list" frameImage="A.png|B.png" buttonImage="A|B" buttonIcon="res:/Resources/image/combodrop_ico.png"/>
+  <KxListWidget name="list" showFullOnHover="true" barThickness="10" vscroll.skinName="vscroll"/>
+  <KScrollArea name="scrollarea" layout="VBox" barThickness="10" vscroll.pageStep="30" vscroll.singleStep="30" vscroll.skinName="vscroll"/>
+  <KScrollBar name="vscroll" fixWidth="9" buttonHeight="8" icon.visible="false" lineAddImage="res:/Resources/image/vscrolladd_hover.png|res:/Resources/image/vscrolladd_normal.png|res:/Resources/image/vscrolladd_down.png" lineSubImage="res:/Resources/image/vscrollsub_hover.png|res:/Resources/image/vscrollsub_normal.png|res:/Resources/image/vscrollsub_down.png" thumbImage="res:/Resources/image/vscrollthumb_hover.png|res:/Resources/image/vscrollthumb_normal.png|res:/Resources/image/vscrollthumb_down.png" backgroundImage="res:/Resources/image/vscollarea_bk.png"/>
+  <KPushButton name="winclose" fixSize="20,30" imagePath="res:/Resources/image/loginclose_normal.png|res:/Resources/image/loginclose_hover.png|res:/Resources/image/loginclose_down.png"/>
+  <KPushButton name="sysmin" fixSize="20,36" imagePath="res:/Resources/image/titlemin_normal.png|res:/Resources/image/titlemin_hover.png|res:/Resources/image/titlemin_down.png"/>
+  <KCheckButton name="sysmaxrestore" fixSize="20,36" imageWidth="20" imagePath="res:/Resources/image/titlemax_normal.png|res:/Resources/image/titlemax_hover.png|res:/Resources/image/titlemax_down.png|res:/Resources/image/titleorg_normal.png|res:/Resources/image/titleorg_hover.png|res:/Resources/image/titleorg_down.png"/>
+  <KCheckButton name="check" imagePath="res:/Resources/image/btncheck_unselect.png|res:/Resources/image/btncheck_unselect_hover.png|res:/Resources/image/btncheck_select.png"/>
+  <KRadioButton name="radio" imagePath="res:/Resources/image/btnradio_unselect.png|res:/Resources/image/btnradio_select.png"/>
+  <KPushButton name="sysclose" fixSize="20,36" imagePath="res:/Resources/image/titleclose_normal.png|res:/Resources/image/titleclose_hover.png|res:/Resources/image/titleclose_down.png"/>
+  <KTabItem name="listtab" frameType="TileH" imagePath="res:/Resources/image/listtab_unselect.png|res:/Resources/image/listtab_select.png"/>
+  <KPushButton name="msgclean" fixSize="25,25" imagePath="res:/Resources/image/msgclean_normal.png|res:/Resources/image/msgclean_hover.png|res:/Resources/image/msgclean_down.png"/>
+  <KKSliderVolume name="volumectrl" fixSize="27,27" popupSize="29,105" slider.frameImage="res:/Resources/image/volslider_frame.png" slider.selectImage="res:/Resources/image/volslider_select.png" slider.thumbImage="res:/Resources/image/volslider_thumb.png" pframe.margins="1,5,1,0" sframe.margins="1,3,1,3" status.fixSize="27,27" pframe.imagePath="res:/Resources/image/pframe_bk.png"/>
+  <KPushButton name="f2charge" textColor="255,255,255" imagePath="res:/Resources/image/f2charge_normal.png|res:/Resources/image/f2charge_hover.png|res:/Resources/image/f2charge_down.png"/>
+  <KTabItem name="facetab" layout="HBox" fixWidth="50" imagePath="res:/Resources/image/facetab_unselect.png|res:/Resources/image/facetab_select.png"/>
+  <KPushButton name="btncommon" fontSize="12" textColor="white" imagePath="res:/Resources/image/messagesend_normal.png|res:/Resources/image/messagesend_hover.png|res:/Resources/image/messagesend_down.png"/>
+</uiskin>

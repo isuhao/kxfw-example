@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KSpacer layout="VBox" margins="30,10,10,10">
+    <KSpacer/>
+    <KSpacer layout="HBox" fixHeight="30">
+      <KSpacer/>
+      <KSpacer layout="HBox">
+        <KLabel text="说话快捷键：" autoAdjust="true"/>
+        <KFrameItem layout="VBox" fixWidth="150" frameType="GridFour" frameSwitch="true" acceptHover="true" imagePath="res:/Resources/image/cfgedit_bk1.png|res:/Resources/image/cfgedit_bk2.png">
+          <KHotkey objectName="hotkey"/>
+        </KFrameItem>
+      </KSpacer>
+      <KSpacer/>
+    </KSpacer>
+    <KSpacer/>
+  </KSpacer>
+</uitree>

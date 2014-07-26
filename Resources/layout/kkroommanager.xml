@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KDialogBase objectName="kkroommanager" windowStyle="ToolWindow" fixSize="590,450" fontName="微软雅黑" skinName="winframe">
+    <KFrameItem layout="VBox" frameType="GridFour" imagePath="res:/Resources/image/cfg_bk.png">
+      <KSpacer layout="HBox" fixHeight="24" itemSpacing="18" margins="5,5,5,0">
+        <KImageItem fixSize="90,24" imagePath="res:/Resources/image/cfgroom_login.png"/>
+        <KSpacer/>
+        <KPushButton objectName="btnClose" skinName="winclose"/>
+      </KSpacer>
+      <KSpacer layout="Anchor">
+         <KSpacer anchor="Left:0|Top:0|Right:0|Bottom:0" layout="HBox">
+          <KTabWidget objectName="tabWizard" fixWidth="100" index="0" layout="VBox" margins="15,15,0,0">
+            <KTabItem layout="HBox" fixHeight="44" frameType="GridFour" imagePath="|res:/Resources/image/cfgtab_select.png">
+              <KSpacer/>
+              <KLabel text="公告设置" textAlignment="AlignCenter" textColor="60,60,60" textMargins="3,3,3,0" autoAdjust="true"/>
+              <KSpacer/>
+            </KTabItem>
+            <KTabItem layout="HBox" fixHeight="44" frameType="GridFour" imagePath="|res:/Resources/image/cfgtab_select.png">
+              <KSpacer/>
+              <KLabel text="房间设置" textAlignment="AlignCenter" textColor="60,60,60" textMargins="3,3,3,0" autoAdjust="true"/>
+              <KSpacer/>
+            </KTabItem>
+            <KTabItem layout="HBox" fixHeight="44" frameType="GridFour" imagePath="|res:/Resources/image/cfgtab_select.png">
+              <KSpacer/>
+              <KLabel text="排麦设置" textAlignment="AlignCenter" textColor="60,60,60" textMargins="3,3,3,0" autoAdjust="true"/>
+              <KSpacer/>
+            </KTabItem>
+            <KTabItem layout="HBox" enabled="false" fixHeight="44" frameType="GridFour" imagePath="|res:/Resources/image/cfgtab_select.png">
+              <KSpacer/>
+              <KLabel text="用户管理" textAlignment="AlignCenter" textColor="60,60,60" textMargins="3,3,3,0" autoAdjust="true"/>
+              <KSpacer/>
+            </KTabItem>
+            <KTabItem layout="HBox" enabled="false" fixHeight="44" frameType="GridFour" imagePath="|res:/Resources/image/cfgtab_select.png">
+              <KSpacer/>
+              <KLabel text="房间人气" textAlignment="AlignCenter" textColor="60,60,60" textMargins="3,3,3,0" autoAdjust="true"/>
+              <KSpacer/>
+            </KTabItem>
+          </KTabWidget>
+          <KFrameItem fixWidth="1" frameType="StretchVMiddle" imagePath="res:/Resources/image/cfg_vertical_line.png"/>
+          <KStackedWidget objectName="stackedWizard" margins="20,20,20,20" autoSwitch="false">
+            <KWidget objectName="bulletin" layout="VBox" visible="true" xmlPath="qrcxml:/Resources/layout/bulletin.xml"/>
+            <KWidget objectName="setting" layout="VBox" visible="false" xmlPath="qrcxml:/Resources/layout/setting.xml"/>
+            <KWidget objectName="miclist" layout="VBox" visible="false" xmlPath="qrcxml:/Resources/layout/miclist.xml"/>
+            <KWebBrowser visible="false"/>
+            <KWebBrowser visible="false"/>
+          </KStackedWidget>
+        </KSpacer>
+        <KLabel objectName="submitTip" anchor="Left:100|Bottom:160|Right:0|Bottom:135" z="1" visible="false" textColor="252,58,78" backgroundColor="163,216,253" textAlignment="AlignCenter"/>
+      </KSpacer>
+    </KFrameItem>
+  </KDialogBase>
+</uitree>

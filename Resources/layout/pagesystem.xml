@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KSpacer layout="VBox" margins="30,10,10,10">
+    <KSpacer/>
+    <KSpacer layout="HBox" fixHeight="-1">
+      <KSpacer/>
+      <KSpacer layout="VBox">
+        <KCheckButton objectName="btnAutoRun" fixHeight="30" text="开机自动运行" imageWidth="28" skinName="check" autoAdjust="true"/>
+        <KCheckButton objectName="btnAutoLogin" fixHeight="30" text="自动登录" imageWidth="28" skinName="check" autoAdjust="true"/>
+      </KSpacer>
+      <KSpacer/>
+    </KSpacer>
+    <KSpacer/>
+  </KSpacer>
+</uitree>

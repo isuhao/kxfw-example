@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" ?>
+<uitree>
+  <KTabItem objectName="tab" layout="HBox" fixSize="-1,31" spacing="5" frameType="GridFour" imagePath="res:/Resources/image/tabitem_unselect.png|res:/Resources/image/tabitem_select.png" margins="5,0,5,0">
+    <KLabel objectName="label" text="社区房间" fontSize="12" textColor="19,179,253" textMagins="5,0,0,0" fontName="微软雅黑" textAlignment="AlignCenter" textMargins="0,0,0,0"/>
+    <KPushButton objectName="close" fixWidth="10" buttonFrame.frameType="OneHVCenter" imagePath="res:/Resources/image/tabitem_close_normal.png|res:/Resources/image/tabitem_close_hover.png|res:/Resources/image/tabitem_close_down.png"/>
+  </KTabItem>
+</uitree>
