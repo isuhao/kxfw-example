@@ -28,6 +28,35 @@ void KxExplorer::execute()
 	m_pViewport = m_pMainWindow->viewport();
 	m_pViewport->installEventFilter(this);
 
+	m_widgetToolTip = new KToolTip(KToolTip::CustomWidget);
+	m_widgetToolTip->setAutoDeleteWhenAppQuit(true);
+	m_widgetToolTip->setDirection(KToolTip::LeftTop);
+	m_widgetToolTip->setTrigger(KToolTip::CursorInTarget);
+	QObject::connect(m_widgetToolTip, SIGNAL(aboutToShow()), this, SLOT(on_tooltip_aboutToShow()));
+	
+	KWidget *root = m_widgetToolTip->rootWidget();
+	m_widgetTip = new KWidget(root);
+	root->addItem(m_widgetTip);
+	m_widgetTip->setLayoutType(KWidget::VBox);
+	m_widgetTip->setMargins(QMargins(2,2,2,2));
+	m_widgetTip->setFixSize(-1,-1);
+	bool bok1 = KXmlUI::widgetFromFile("res:/Resources/layout/gifttip.xml", m_widgetTip);
+
+	KTabWidget *userWizard = m_pMainWindow->findChild<KTabWidget*>("userWizard");
+	KStackedWidget *userStacked = m_pMainWindow->findChild<KStackedWidget*>("userStacked");
+	QObject::connect(userWizard, SIGNAL(indexSelected(int)), userStacked, SLOT(setCurrentIndex(int)));
+	KCommonListWidget *list = m_pMainWindow->findChild<KCommonListWidget*>("userList");
+	list->setProperty("myToolTip", QVariant::fromValue<QObject*>(m_widgetToolTip));
+	list->setItemCreator(new KListItemCreatorT<KKListItem>());
+	KCommonListModel *model = qobject_cast<KCommonListModel*>(list->model());
+	model->batchInsert();
+	for(int i = 0; i < 50; i++)
+	{
+		model->addItem(QString("items%1").arg(i+1), (rand() % 100000) + 100);
+	}
+	model->batchCommit();
+
+
 	KSpacer *captionArea = m_pMainWindow->findChild<KSpacer*>("captionArea");
 	captionArea->setDragPolicy(KWidget::WindowMove);
 	bool bOk4 = QObject::connect(captionArea, SIGNAL(mouseEvent(QEvent*)), this, SLOT(on_captionArea_mouseEvent(QEvent*)));
@@ -58,6 +87,13 @@ void KxExplorer::execute()
 	KPushButton *btnClose = m_pMainWindow->findChild<KPushButton*>("titleClose");
 	bool bOK2 = QObject::connect(btnClose, SIGNAL(clicked()), m_pMainWindow, SLOT(close()));
 
+	btnClose->setToolTip("这只是一个测试\r\n关闭的按钮\r\n你点击它，真的可以关闭");
+	KToolTip::textTipInstance()->addTarget(btnClose);
+	btnMaxRestore->setToolTip("最大化或恢复");
+	KToolTip::textTipInstance()->addTarget(btnMaxRestore);
+	btnMin->setToolTip("最小化");
+	KToolTip::textTipInstance()->addTarget(btnMin);
+
 	m_pRoom = m_pMainWindow->findChild<KWidget*>("oneRoom");
 	for(int i = 0; i < 3; i++)
 	{
@@ -72,6 +108,23 @@ void KxExplorer::execute()
 		KLabel *name = root->findChild<KLabel*>("nickName");
 		name->setText(QString("VideoName%1").arg(i+1));
 	}
+
+	
+	KTextEdit *edit = m_pMainWindow->findChild<KTextEdit*>("publicChat");
+	KTextCursor txtCursor = edit->textCursor();
+	txtCursor.insertText("默认就可以打开我的主页：开心&努力[http://www.kxtry.com]点击试试", Qt::blue, "http://www.kxtry.com","", true);
+	txtCursor.insertText("\r\n\r\n");
+	txtCursor.insertText("还可以打开我的开源GitHub主页：开心&努力[https://github.com/kxtry]点击试试", Qt::blue, "https://github.com/kxtry","", true);
+
+
+	KTextEdit *edit2 = m_pMainWindow->findChild<KTextEdit*>("privateChat");
+	txtCursor = edit2->textCursor();
+	QString txt = "以前创业开发的一个产品界面，创业失败后，再重新打工，这么好的代码如果只是放在硬盘上，那是一种浪费，"\
+		"再者本人已经转战服务端开发，这KXFW界面库，对我来说已经不再重要，重要的是有人能够发挥它的价值。"\
+		"利用它做为一个学习的例子又或作为一个产品开发库，做什么用途都好，至少比占用硬盘浪费空间的好。"\
+		"感恩曾经工作过的公司和同事，也感恩过去的我、现在的我还有将来的我---【心路xinlu】";
+
+	txtCursor.insertText(txt);
 
 
 	m_pMainWindow->moveCenter(NULL);
@@ -238,4 +291,48 @@ void KxExplorer::on_captionArea_mouseEvent( QEvent *e )
 		return ;
 	}
 	e->setAccepted(false);
+}
+
+void KxExplorer::on_tooltip_aboutToShow()
+{
+	KToolTip *tip = qobject_cast<KToolTip*>(sender());
+	KKListItem *item = qobject_cast<KKListItem*>(tip->target());
+	QVariant other = item->itemData((Qt::ItemDataRole)KCommonListModel::UserRoleOther);
+
+	int val = other.toInt();
+	static int index = 0;
+	index = index++ % 3;
+	switch(index)
+	{
+	case 0:
+		val = 1;
+		break;
+	case 1:
+		val = 1000;
+		break;
+	default:
+		val = 10000000;
+		break;
+	}
+
+	KLabel *price = m_widgetTip->findChild<KLabel*>("price");
+	price->setText(QString("%1").arg(val));
+	price->setAutoAdjust(true);
+	/*显示提示*/
+	m_widgetTip->invalidateLayout();
+
+	QSizeF s = m_widgetTip->minimumSize();
+	m_widgetToolTip->setWindowSize(s.toSize());
+}
+
+KKListItem::KKListItem( KListWidget *view )
+: KListItem(view)
+{
+	KToolTip *toolTip = qobject_cast<KToolTip*>(view->property("myToolTip").value<QObject*>());
+	toolTip->addTarget(this);
+}
+
+KKListItem::~KKListItem()
+{
+	
 }

@@ -41,7 +41,9 @@
 #include "kanimationitem.h"
 #include "ktabwidget.h"
 #include "kstackedwidget.h"
-
+#include "kcommonlistmodel.h"
+#include "kcommonlistwidget.h"
+#include "ktooltip.h"
 
 
 #include "resource.h"

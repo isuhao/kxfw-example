@@ -39,8 +39,8 @@
             <KFlashItem objectName="giftRotation" translucent="false" flashPath="other:/Resources/other/giftRotation/gift.swf"/>
           </KFrameItem>
           <KSplitWidget  splitbarSize="5" rightBotMinSize="50" leftTopMinSize="50" value="300" splitbar.backgroundColor="217,228,234">
-            <KTextEdit objectName="publicChat" hasContextMenu="true" readOnly="true" layout="Anchor" scrollColor="192,225,242" text="aaaaaa"/>
-            <KTextEdit objectName="privateChat" layout="Anchor" scrollColor="192,225,242" hasContextMenu="true" text="bbbbbb\r\n\r\n\r\n"/>
+            <KTextEdit objectName="publicChat" hasContextMenu="true" readOnly="true" layout="Anchor" scrollColor="192,225,242"/>
+            <KTextEdit objectName="privateChat" layout="Anchor" scrollColor="192,225,242" hasContextMenu="true"/>
           </KSplitWidget>
           <KWidget fixHeight="1" backgroundColor="218,218,218"/>
           <KSpacer objectName="inputArea" z="100" layout="Anchor" fixHeight="110" xmlPath="res:/Resources/layout/roomeditbar.xml"/>
@@ -80,9 +80,9 @@
             </KTabWidget>
           </KSpacer>
           <KStackedWidget objectName="userStacked" index="1" margins="1,0,1,0">
-            <KxListWidget objectName="adminList" skinName="list"/>
-            <KxListWidget objectName="userList" skinName="list"/>
-            <KxListWidget objectName="micList" skinName="list"/>
+            <KCommonListWidget objectName="adminList" itemsText="adminListA|adminListB|adminListC|adminListD" skinName="list"/>
+            <KCommonListWidget objectName="userList" skinName="list"/>
+            <KCommonListWidget objectName="micList" backgroundColor="white" itemsText="userListA|userListB|userListC|userListD" skinName="list"/>
           </KStackedWidget>
           <KWidget fixHeight="1" backgroundColor="172,202,217"/>
           <KTabWidget objectName="giftsTab" fixHeight="28" index="0" layout="HBox"  backgroundColor="19,179,253">

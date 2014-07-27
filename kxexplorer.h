@@ -2,6 +2,14 @@
 
 class KTextBubbleTip;
 
+class KKListItem : public KListItem
+{
+	Q_OBJECT
+public:
+	explicit KKListItem(KListWidget *view);
+	~KKListItem();
+};
+
 class KxExplorer : public QObject
 {
 	Q_OBJECT
@@ -21,6 +29,7 @@ private slots:
 	void on_facePage_item_clicked();
 	void on_colorWord_clicked();
 	void on_captionArea_mouseEvent( QEvent *e );
+	void on_tooltip_aboutToShow();
 
 private:
 	bool eventFilter(QObject *w, QEvent *e);
@@ -37,4 +46,7 @@ private:
 	QPointer<KPushButton> m_pBtnColorWord;
 
 	QPointer<KTableWidget> m_pFace[4];
+
+	QPointer<KToolTip> m_widgetToolTip;
+	QPointer<KWidget> m_widgetTip;
 };
