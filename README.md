@@ -13,4 +13,4 @@ kxfw-example<br>
 8.其它特性如窗口布局HBox,VBox,Anchor，Table四种。<br>
 9.Resource/layout目录下放置了产品的所有UI布局文件，而DEMO只显示了主界面，其它文件可自由测试。<br>
 <br>
-演示效果，可到http://www.kxtry.com主页查看。<br>
+演示效果，可到<a href="http://www.kxtry.com">http://www.kxtry.com<a>主页上看。<br>
